@@ -2,8 +2,8 @@
 
 var conta = {
     nomeTitu: "Resenha",
-    numero: "001",
-    agencia: "sicredi",
+    numero: null,
+    agencia: null,
     saldo: 0,
 
     deposito: function(){
@@ -25,8 +25,12 @@ var conta = {
     }
 }
 
+conta.numero = parseFloat(prompt("Digite o numero da conta"));
+conta.agencia = prompt("Digite a agencia");
+
+
 do{
-    var esc = prompt("Digite a operacao que deseja realizar\nConta "+ conta.numero +" \nagencia: "+conta.agencia+" \n0-cancelar\n1- deposito\n2- Saque");
+    var esc = prompt("Digite a operacao que deseja realizar\nConta "+ conta.numero +" \nagencia: "+ conta.agencia +" \n0-cancelar\n1- deposito\n2- Saque");
     if (esc == 1) {
         conta.deposito();
     }else if(esc == 2){
