@@ -1,6 +1,6 @@
 const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-={}[]|:;"<>,.?/';
 
-tamanhoSenha = Number(prompt("Digite o tamanho da senha que deseja: "))
+var tamanhoSenha = Number(prompt("Digite o tamanho da senha que deseja: "))
 var senha = '';
 
 function gerarSenha(){
