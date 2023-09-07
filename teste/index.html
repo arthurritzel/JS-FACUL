@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1{
+            color: blue;
+            font-size: 2em;
+        }
+
+        .rit:after{
+        content: '|';
+        margin-left: 5px;
+        opacity: 1;
+        animation: pisca .7s infinite;
+        }
+        @keyframes pisca{
+            0%, 100%{
+            opacity: 1;
+        }
+        50%{
+            opacity: 0;
+        }
+
+    }
+    .rit{
+        color: black;
+    }
+    </style>
+</head>
+<body>
+    <h1 class="ART">arthur</h1>
+    <h1 class="rit">Ritzel</h1>
+
+    <script>
+        function typeWrite(elemento){
+            const textoArray = elemento.innerText.split('');
+            elemento.innerHTML = ' ';
+             textoArray.forEach(function(letra, i){   
+            
+                setTimeout(function(){
+                    elemento.innerText += letra;
+                }, 120 * i)
+            });
+            
+        }
+        const titulo = document.querySelector('.ART');
+    
+        const rit = document.querySelector(".rit");
+        
+        typeWrite(titulo)
+        const textoArray = rit.innerText.split('');
+        rit.innerHTML = ' '
+        setTimeout(()=>{
+            
+            textoArray.forEach(function(letra, i){   
+            
+                setTimeout(function(){
+                    rit.innerText += letra;
+                }, 120 * i)
+            })
+        }, 1000);
+    
+    </script>
+</body>
+</html>
